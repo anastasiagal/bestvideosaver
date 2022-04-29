@@ -87,16 +87,16 @@ h2 {
 /* Header content section */
 
 .content {
-    padding-top: 47px;
-    background-color: #ECF0F9;
     display: flex;
+    padding-top: 47px;
     padding-bottom: 116px;
-
+    background-color: #ECF0F9;
+    position: relative;
+    
     &__inner {
-        
         max-width: 668px;
         text-align: center;
-
+        
         h2 {
             margin-bottom: 10px;
         }
@@ -107,10 +107,17 @@ h2 {
             margin-bottom: 92px;
         }
     }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
 
 .form {
     display: flex;
+    position: relative;
 }
 
 .input-content {
