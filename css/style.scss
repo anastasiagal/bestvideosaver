@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto&display=swap');
+@import 'fonts';
+@import 'mixin';
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #575757;
+}
+
+h2 {
+    font-family: 'Aeroport-Regular';
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: 400;
+    color: #303030;
+}
+
+/* Header */
+
+.container {
+    max-width: 1060px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+        font-family: 'Aeroport-Bold';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: #000;
+        text-transform: uppercase;
+        margin-left: 18px;
+    }
+}
+
+.header {
+    &__top {
+        padding: 13px 0;
+    }
+
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        display: flex;
+        font-family: 'Aeroport-Regular';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #000;
+
+        &:not(:first-child) {
+            margin-left: 50px;
+        }
+    }
+
+    &__list-item-link {
+        display: flex;
+
+        span {
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+        }
+
+        img {
+            margin-left: 8px;
+        }
+    }
+}
+
+/* Header content section */
+
+.content {
+    padding-top: 47px;
+    background-color: #ECF0F9;
+    display: flex;
+    padding-bottom: 116px;
+
+    &__inner {
+        
+        max-width: 668px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 92px;
+        }
+    }
+}
+
+.form {
+    display: flex;
+}
+
+.input-content {
+    width: 650px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid #C1CFF5;
+    padding: 24px 30px 24px 20px;
+    font-family: 'Aeroport-Light';
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 17px;
+    
+    &::placeholder {
+        color: #303030; 
+    }
+
+    @include breakpoint-576 {
+        width: 100%;
+    }
+}
+
+.btn {
+    display: block;
+    width: 172px;
+    height: 65px;
+    border: none;
+    padding: 24px 37px;
+    background: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+    border-radius: 10px;
+    font-family: 'Aeroport-Bold';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 17px;
+    color: #fff;
+    margin-left: -20px;
+    cursor: pointer;
+}
