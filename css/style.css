@@ -249,6 +249,7 @@ h2 {
   -webkit-column-gap: 20px;
           column-gap: 20px;
   text-align: center;
+  padding-bottom: 70px;
 }
 
 .advantage__item {
@@ -263,6 +264,12 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   width: 332px;
+  height: 462px;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 20px rgba(133, 133, 133, 0.25);
+          box-shadow: 0px 4px 20px rgba(133, 133, 133, 0.25);
 }
 
 .advantage__item h3 {
