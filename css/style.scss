@@ -14,6 +14,13 @@ h2 {
     line-height: 45px;
     font-weight: 400;
     color: #303030;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Aeroport-Bold';
+    font-weight: 700;
+    color: #303030;
 }
 
 /* Header */
@@ -209,12 +216,8 @@ h2 {
         box-shadow: 0px 4px 20px rgba(133, 133, 133, 0.25);
 
         h3 {
+            font-size: 20px;
             margin-top: 29px;
-            font-size: 22px;
-            line-height: 25px;
-            color: #303030;
-            font-family: 'Aeroport-Bold';
-            font-weight: 700;
             margin-bottom: 26px;
             min-height: 50px;
         }
@@ -223,8 +226,8 @@ h2 {
             font-size: 16px;
             line-height: 21px;
             margin-bottom: 42px;
-
             position: relative;
+
             &::before {
                 content: "";
                 position: absolute;
@@ -299,12 +302,7 @@ h2 {
         }
 
         h3 {
-            font-size: 20px;
-            line-height: 25px;
-            font-family: 'Aeroport-Bold';
-            font-weight: 700;
             margin-bottom: 15px;
-            color: #303030;
         }
 
         p {
@@ -318,6 +316,49 @@ h2 {
 
             a {
                 text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* Section assistant*/
+.assistant {
+    padding: 70px 0;
+
+    h2 {
+        max-width: 723px;
+        margin: 0 auto 64px;
+    }
+
+    &__item {
+        h3 {
+            font-size: 22px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 25px;
+            font-family: 'Aeroport-Regular';
+            font-weight: 400;
+            color: #303030;
+            position: relative;
+            padding-left: 62px;
+
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 6px;
+                height: 100%;
+                background: linear-gradient(222.19deg, #9D5AA3 19.85%, #BB5981 37.14%, #DC6062 52.62%, #E76F59 67.75%, #EDA66A 84.45%);
+                left: 0;
+                top: 0;
+                border-radius: 5px;
             }
         }
     }
