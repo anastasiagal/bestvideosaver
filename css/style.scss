@@ -174,14 +174,13 @@ h2 {
 
 /* Section advantage */
 .advantage {
+    padding: 70px 0;
     background-color: #F9F9F9;
 
     &__inner{
-        padding-top: 70px;
         max-width: 668px;
         text-align: center;
-        margin: 0 auto 79px;
-        
+        margin: 0 auto 79px; 
         
         h2 {
             margin-bottom: 10px;
@@ -197,7 +196,6 @@ h2 {
         display: flex;
         column-gap: 20px;
         text-align: center;
-        padding-bottom: 70px;
     }
 
     &__item {
@@ -248,4 +246,79 @@ h2 {
     background: linear-gradient(180deg, #EB626D 0%, #EF8546 100%);
     border-radius: 10px;
     padding: 44px 87px;
+}
+
+/* Section work */
+.work {
+    padding: 50px 0;
+    background-color: #ECF0F9;
+
+    &__inner {
+        max-width: 750px;
+        text-align: center;
+        margin: 0 auto 50px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            max-width: 717px;
+            font-size: 22px;
+            line-height: 29px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 22px 26px 36px 76px;
+        background-color: #fff;
+        width: 508px;
+        min-height: 193px;
+        border-radius: 10px;
+        filter: drop-shadow(0px 4px 20px rgba(133, 133, 133, 0.25));
+        position: relative;
+
+        &:last-child {
+            width: 684px;
+            min-height: 107px;
+            margin: 0 auto;
+        }
+
+        img {
+            position: absolute;
+            top: 9px;
+            left: 9px;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 25px;
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #303030;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 21px;
+            font-family: 'Montserrat', sans-serif;
+
+            span {
+                font-weight: 600;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
 }
