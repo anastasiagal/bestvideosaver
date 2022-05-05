@@ -409,3 +409,36 @@ h3 {
         }
     }
 }
+
+/* Footer */
+
+.footer {
+    background-color: #ECF0F9;
+    padding: 53px 0 54px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-right: 100px;
+
+        a {
+            font-size: 18px;
+            line-height: 25px;
+            color: #000;
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+
+            &:not(:last-child) {
+                margin-bottom: 9px;
+            }
+        }
+    }
+}
+

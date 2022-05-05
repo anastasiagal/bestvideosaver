@@ -471,4 +471,46 @@ h3 {
 .question__text ul {
   margin: 0;
 }
+
+/* Footer */
+.footer {
+  background-color: #ECF0F9;
+  padding: 53px 0 54px 0;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  margin-right: 100px;
+}
+
+.footer__item a {
+  font-size: 18px;
+  line-height: 25px;
+  color: #000;
+  font-family: 'Aeroport-Bold';
+  font-weight: 700;
+}
+
+.footer__item a:not(:last-child) {
+  margin-bottom: 9px;
+}
 /*# sourceMappingURL=style.css.map */
