@@ -1,0 +1,133 @@
+.blog {
+    padding: 70px 0;
+    background-color: #F9F9F9;
+}
+
+.blog-items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    @include breakpoint-992 {
+        justify-content: center;
+    }
+}
+
+.blog-item {
+    max-width: 330px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(133, 133, 133, 0.25);
+    border-radius: 10px;
+    
+    .image-item {
+        border-radius: 10px 10px 0px 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .item-content {
+        padding: 21px 24px 30px 24px;
+
+        &__date {
+            font-family: 'Aeroport-Regular';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            color: #575757;
+            margin-bottom: 8px;
+        }
+
+        &__title {
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: start;
+            margin-bottom: 5px;
+
+            a {
+                color: #303030;
+            }
+        }
+
+        &__description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+}
+
+.blog-content {
+    padding: 70px 0 35px 0;
+    background-color: #F9F9F9;
+
+    &__date {
+        font-family: 'Aeroport-Regular';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: #303030;
+        margin-bottom: 9px;
+    }
+
+    &__title {
+        font-family: 'Aeroport-Medium';
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 25px;
+        margin-bottom: 33px;
+        padding: 7px 0;
+        background-image: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+
+    ol {
+        list-style-position: inside;
+        padding: 0;
+    }
+
+    ol > li {
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 30px;
+        color: #303030;
+    
+        &::marker {
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 25px;
+            color: #303030;
+        }
+    
+        h2 {
+            margin-left: 26px;
+            margin-top: -26px;
+            margin-bottom: 5px;
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 25px;
+            color: #303030;
+    }
+    
+        p {
+            font-family: 'Aeroport-Regular';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #303030;
+            margin-top: 25px;
+        }
+    }
+}

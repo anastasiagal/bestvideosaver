@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto&display=swap');
 @import 'fonts';
 @import 'mixin';
-
+@import 'blog';
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -14,7 +14,7 @@ h2 {
     line-height: 45px;
     font-weight: 400;
     color: #303030;
-    text-align: center;
+    // text-align: center;
 }
 
 h3 {
@@ -49,19 +49,61 @@ h3 {
 
 .header {
     &__top {
-        padding: 13px 0;
+        padding-top: 13px;
     }
 
     &__top-inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: 13px;
+        // position: relative;
     }
 }
 
 .menu {
+    display: flex;
+
+    @include breakpoint-992 {
+        // display: none; 
+    }
+
+    &__btn {
+        display: none;
+
+        @include breakpoint-992 {
+            display: flex;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            position: relative;
+            right: 15px;
+            z-index: 50;
+            cursor: pointer;
+        }
+    }
+
     &__list {
         display: flex;
+
+        @include breakpoint-992 {
+            display: none;
+            // display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            background-color: #fff;
+            height: 270px;
+            // transform: translateY(-130%);
+            transition: transform 0.5s;
+    
+            // &--active {
+            //     transform: translateY(0%);
+            // }
+        }
     }
 
     &__list-item {
@@ -70,13 +112,14 @@ h3 {
         font-weight: 400;
         font-size: 18px;
         line-height: 25px;
+        flex-direction: column;
 
         &:not(:first-child) {
             margin-left: 50px;
         }
     }
 
-    &__list-item-link {
+    &__list-link {
         display: flex;
         color: #000;
 
@@ -87,6 +130,59 @@ h3 {
 
         img {
             margin-left: 8px;
+            height: auto;
+        }
+    }
+}
+
+.select-lang {
+    position: relative;
+    z-index: 20;
+    
+    // @include breakpoint-992 {
+    //     margin-top: 50px;
+    // }
+
+    &__list {
+        position: absolute;
+        right: -10px;
+        top: 37px;
+        z-index: 50;
+        width: 130px;
+        height: 80px;
+        background-color: #fff;
+        border: 1px solid #C1CFF5;
+        border-radius: 10px;
+        text-transform: none;
+        opacity: 1;
+        visibility: visible;
+
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s;
+        }
+
+        @include breakpoint-992 {
+            position: static;
+            border-radius: 0;
+            border: none;
+            width: 230px;
+        }
+    }
+
+    &__item {
+        padding: 3px 20px;
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 25px;
+        transition: background-color 0.1s ease-in;
+        a {
+            color: #000;
+        }
+
+        &:hover {
+            background-color: #ECF0F9;
         }
     }
 }
@@ -95,16 +191,32 @@ h3 {
 
 .content {
     display: flex;
-    padding-top: 47px;
-    padding-bottom: 116px;
+    flex-direction: column;
+    padding: 47px 0;
     background-color: #ECF0F9;
     position: relative;
-    z-index: 50;
+    z-index: 10;
 
     &__pic-left {
         position: absolute;
         left: 10px;
         bottom: 10px;
+
+        img {
+            height: auto;
+        }
+
+        @include breakpoint-1280 {
+            img {
+                max-width: 80%;
+            }
+        }
+
+        @include breakpoint-1200 {
+            img {
+                display: none;
+            }
+        }
     }
 
     &__pic-right {
@@ -112,6 +224,23 @@ h3 {
         top: 10px;
         right: 10px;
         z-index: 10;
+
+        img {
+            height: auto;
+        }
+
+        @include breakpoint-1366 {
+            right: 0;
+            
+            img {
+                display: none;
+            }
+        }
+    }
+
+    &__box {
+        position: relative;
+        z-index: 80;
     }
     
     &__inner {
@@ -125,7 +254,6 @@ h3 {
         p {
             font-size: 20px;
             line-height: 26px;
-            margin-bottom: 92px;
         }
     }
 
@@ -134,12 +262,23 @@ h3 {
         bottom: 0;
         right: 0;
         z-index: 5;
+
+        @include breakpoint-1280 {
+            img {
+                display: none;
+            }
+        }
     }
 }
 
 .form {
     display: flex;
-    position: relative;
+    margin-top: 92px;
+    padding-bottom: 69px;
+
+    @include breakpoint-576 {
+        flex-wrap: wrap;
+    }
 }
 
 .input-content {
@@ -157,8 +296,12 @@ h3 {
         color: #303030; 
     }
 
-    @include breakpoint-576 {
+    @include breakpoint-768 {
         width: 100%;
+    }
+
+    @include breakpoint-576 {
+        margin-bottom: 10px;
     }
 }
 
@@ -177,7 +320,71 @@ h3 {
     color: #fff;
     margin-left: -20px;
     cursor: pointer;
+
+    @include breakpoint-576 {
+        width: 100%;
+        margin-left: 0;
+    }
 }
+
+/* Preloader */
+
+.wrap-preloader {
+    position: relative;
+    margin: 0 auto;
+}
+
+.preloader {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 45px;
+    transform: translate(-50%, -50%);
+    z-index: 90;
+
+    p {
+        width: 321px;
+        font-family: 'Aeroport-Light';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 12px;
+    }
+  }
+  
+.circlesvg {
+    width: 50px;
+    height: 50px;
+    margin: 12px 0;
+  }
+  
+.bg {
+    fill: none;
+    stroke-width: 5px;
+    stroke: transparent;
+  }
+  
+.meter-1 {
+    fill: none;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 0;
+    stroke: #fff;
+    animation: progress 5s ease-out;
+  }
+  
+@keyframes progress {
+      from {
+          stroke-dashoffset: 360;
+      }
+      to {
+          stroke-dashoffset: 0;
+      }
+  }
+  
 
 /* Section advantage */
 .advantage {
@@ -185,7 +392,7 @@ h3 {
     background-color: #F9F9F9;
 
     &__inner{
-        max-width: 668px;
+        max-width: 710px;
         text-align: center;
         margin: 0 auto 79px; 
         
@@ -198,11 +405,16 @@ h3 {
             line-height: 29px;
         }
     }
-
+    // убрать класс с ul
     &__items {
         display: flex;
         column-gap: 20px;
         text-align: center;
+
+        @include breakpoint-768 {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -225,7 +437,7 @@ h3 {
         p {
             font-size: 16px;
             line-height: 21px;
-            margin-bottom: 42px;
+            // margin-bottom: 42px;
             position: relative;
 
             &::before {
@@ -242,6 +454,14 @@ h3 {
                 text-decoration: underline;
             }
         }
+
+        @include breakpoint-992 {
+            height: auto;
+        }
+
+        @include breakpoint-768 {
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -249,6 +469,80 @@ h3 {
     background: linear-gradient(180deg, #EB626D 0%, #EF8546 100%);
     border-radius: 10px;
     padding: 44px 87px;
+
+    @include breakpoint-992 {
+        padding: 26px 72px;
+    }
+
+    @include breakpoint-768 {
+        padding: 26px 87px;
+    }
+
+    img {
+        height: auto;
+    } 
+}
+
+/* Block video */
+
+.video-box {
+    position: relative;
+    max-width: 548px;
+    margin: 0 auto 26px;
+
+    img {
+        position: absolute;
+        top: 23px;
+        right: 23px;
+        z-index: 10;
+    }
+}
+
+video {
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    border: 1px solid #8319DF;
+    border-radius: 10px;
+}
+
+.btn-video {
+    display: block;
+    width: 548px;
+    height: 66px;
+    margin: 0 auto;
+    border: none;
+    padding: 24px 37px;
+    background: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+    border-radius: 10px;
+    font-family: 'Aeroport-Bold';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 17px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 16px;
+
+    img {
+        display: inline-block;
+        vertical-align: sub;
+    }
+
+    span {
+        margin-left: 5px;
+    }
+
+    &--white {
+        background: #fff;
+        color: #000;
+        border: 1px solid #8319DF;
+        border-radius: 10px;
+    }
+
+    @include breakpoint-576 {
+        width: 100%;
+    }
 }
 
 /* Section work */
@@ -274,6 +568,7 @@ h3 {
 
     &__items {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 20px;
     }
@@ -293,6 +588,10 @@ h3 {
             width: 684px;
             min-height: 107px;
             margin: 0 auto;
+
+            @include breakpoint-992 {
+                width: 100%;
+            }
         }
 
         img {
@@ -317,6 +616,15 @@ h3 {
             a {
                 text-decoration: underline;
             }
+        }
+
+        @include breakpoint-1200 {
+            width: 465px;
+        }
+
+        @include breakpoint-992 {
+            width: 100%;
+            min-height: 160px;
         }
     }
 }
@@ -414,29 +722,46 @@ h3 {
 
 .footer {
     background-color: #ECF0F9;
-    padding: 53px 0 54px 0;
+    padding: 42px 0 52px 0;
 
-    &__inner {
+    @include breakpoint-576 {
+        padding: 42px 20px 52px 20px;
+    }
+
+    .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 
-    &__item {
+    .footer-lists {
+        display: flex;
+    }
+
+    ul {
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
-        margin-right: 100px;
+        list-style: none;
+        padding: 0;
+        margin: 25px 116px 0px 0px;
 
-        a {
+        li {
+            font-family: 'Aeroport-Bold';
+            font-style: normal;
+            font-weight: 700;
             font-size: 18px;
             line-height: 25px;
-            color: #000;
-            font-family: 'Aeroport-Bold';
-            font-weight: 700;
-
+            text-align: center;
+  
+            a {
+              display: flex;
+              text-align: left;
+              color: #000000;
+            }
+  
             &:not(:last-child) {
-                margin-bottom: 9px;
+              margin-bottom: 9px;
             }
         }
     }
