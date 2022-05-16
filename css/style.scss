@@ -390,7 +390,7 @@
           stroke-dashoffset: 0;
       }
   }
-  
+   
 
 /* Section advantage */
 .advantage {
@@ -398,9 +398,8 @@
     background-color: #F9F9F9;
 
     &__inner{
-        max-width: 710px;
         text-align: center;
-        margin: 0 auto 79px; 
+        margin: 0 auto; 
     }
 
     &__title {
@@ -413,90 +412,166 @@
     }
 
     &__text {
+        max-width: 710px;
+        margin: 0 auto;
         font-family: 'Montserrat', sans-serif;
         font-size: 22px;
         line-height: 29px;
         color: #575757;
-    }
-    // убрать класс с ul
-    &__items {
-        display: flex;
-        column-gap: 20px;
-        text-align: center;
-
-        @include breakpoint-768 {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+        margin-bottom: 79px;
     }
 
-    &__item {
+    ul {
         display: flex;
-        flex-direction: column;
-        width: 332px;
-        height: 462px;
-        padding: 14px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0px 4px 20px rgba(133, 133, 133, 0.25);
-
-        h3 {
-            font-size: 20px;
-            margin-top: 29px;
-            margin-bottom: 26px;
-            min-height: 50px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 21px;
-            // margin-bottom: 42px;
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                width: 61px;
-                height: 1px;
-                background-color: #000;
-                top: -13px;
-                left: 40%;
-            }
-
-            a {
-                text-decoration: underline;
-            }
-        }
+        gap: 20px;
+        list-style: none;
+        padding: 0;
 
         @include breakpoint-992 {
-            height: auto;
+            flex-direction: column;
+            align-items: center;
         }
 
-        @include breakpoint-768 {
-            margin-bottom: 20px;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 332px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(133, 133, 133, 0.25);
+            border-radius: 10px;
+            padding: 14px 14px 42px;
+
+            div {
+                // height: 217px;
+                background: linear-gradient(180deg, #EB626D 0%, #EF8546 100%);
+                padding: 44px 87px;
+                border-radius: 10px;
+                margin-bottom: 29px;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            h3 {
+                font-family: 'Aeroport-Bold';
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 25px;
+                color: #303030;
+                margin-bottom: 26px;
+                min-height: 50px;
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                line-height: 21px;
+                color: #575757;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 61px;
+                    height: 1px;
+                    background-color: #000;
+                    top: -13px;
+                    left: 40%;
+                }
+
+                a {
+                    text-decoration: underline;
+                }
+            }
         }
     }
+    // убрать класс с ul
+    // &__items {
+    //     display: flex;
+    //     column-gap: 20px;
+    //     text-align: center;
+
+    //     @include breakpoint-768 {
+    //         flex-wrap: wrap;
+    //         justify-content: center;
+    //     }
+    // }
+
+    // &__item {
+    //     display: flex;
+    //     flex-direction: column;
+    //     width: 332px;
+    //     height: 462px;
+    //     padding: 14px;
+    //     background-color: #fff;
+    //     border-radius: 10px;
+    //     box-shadow: 0px 4px 20px rgba(133, 133, 133, 0.25);
+
+    //     h3 {
+    //         font-size: 20px;
+    //         margin-top: 29px;
+    //         margin-bottom: 26px;
+    //         min-height: 50px;
+    //     }
+
+    //     p {
+    //         font-size: 16px;
+    //         line-height: 21px;
+    //         // margin-bottom: 42px;
+    //         position: relative;
+
+    //         &::before {
+    //             content: "";
+    //             position: absolute;
+    //             width: 61px;
+    //             height: 1px;
+    //             background-color: #000;
+    //             top: -13px;
+    //             left: 40%;
+    //         }
+
+    //         a {
+    //             text-decoration: underline;
+    //         }
+    //     }
+
+    //     @include breakpoint-992 {
+    //         height: auto;
+    //     }
+
+    //     @include breakpoint-768 {
+    //         margin-bottom: 20px;
+    //     }
+    // }
 }
 
-.image-card {
-    background: linear-gradient(180deg, #EB626D 0%, #EF8546 100%);
-    border-radius: 10px;
-    padding: 44px 87px;
+// .image-card {
+//     background: linear-gradient(180deg, #EB626D 0%, #EF8546 100%);
+//     border-radius: 10px;
+//     padding: 44px 87px;
 
-    @include breakpoint-992 {
-        padding: 26px 72px;
-    }
+//     @include breakpoint-992 {
+//         padding: 26px 72px;
+//     }
 
-    @include breakpoint-768 {
-        padding: 26px 87px;
-    }
+//     @include breakpoint-768 {
+//         padding: 26px 87px;
+//     }
 
-    img {
-        height: auto;
-    } 
+//     img {
+//         height: auto;
+//     } 
+// }
+
+/* Section video */
+
+.video-content {
+    background-color: #F9F9F9;
+    padding-top: 70px;
 }
-
-/* Block video */
 
 .video-box {
     position: relative;
@@ -551,7 +626,6 @@ video {
         color: #000;
         border: 1px solid #8319DF;
         border-radius: 10px;
-        margin-bottom: 70px;
     }
 
     @include breakpoint-576 {
