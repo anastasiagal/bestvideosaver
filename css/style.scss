@@ -3,7 +3,7 @@
 @import 'mixin';
 @import 'blog';
 @import 'termsofservice';
-// @import 'topinstatools';
+@import 'topinstatools';
 @import 'contactus';
 
 /* Header */
@@ -227,7 +227,7 @@
     }
     
     &__inner {
-        max-width: 668px;
+        max-width: 720px;
         text-align: center;
     }
 

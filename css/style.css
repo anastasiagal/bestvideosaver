@@ -244,6 +244,82 @@
   font-weight: 700;
 }
 
+.tools-content {
+  padding-top: 70px;
+}
+
+.tools-content__description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  line-height: 29px;
+  text-align: center;
+  color: #303030;
+  margin-bottom: 70px;
+}
+
+.tools-content .tools-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+.tools-content .tools-item:last-child {
+  margin-bottom: 50px;
+}
+
+.tools-content .tools-item .image-item {
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .tools-content .tools-item .image-item {
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.tools-content .tools-item .item-content {
+  width: 509px;
+  padding: 0 20px;
+}
+
+.tools-content .tools-item .item-content__title {
+  font-family: 'Aeroport-Bold';
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 40px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#B926AE), to(#7A16E6));
+  background-image: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.tools-content .tools-item .item-content__text {
+  font-family: 'Aeroport-Regular';
+  font-weight: 400;
+  font-size: 18px;
+  color: #303030;
+}
+
+@media (max-width: 992px) {
+  .tools-content .tools-item .item-content {
+    width: 470px;
+    margin: 0 auto;
+  }
+}
+
 .contact {
   background-color: #F9F9F9;
   padding: 30px 0 136px;
@@ -636,7 +712,7 @@
 }
 
 .content__inner {
-  max-width: 668px;
+  max-width: 720px;
   text-align: center;
 }
 

@@ -1,0 +1,61 @@
+.tools-content {
+    padding-top: 70px;
+
+    &__description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        line-height: 29px;
+        text-align: center;
+        color: #303030;
+        margin-bottom: 70px;
+    }
+
+    .tools-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+
+        &:last-child {
+            margin-bottom: 50px;
+        }
+
+        .image-item {
+            height: auto;
+
+            @include breakpoint-992 {
+                margin: 0 auto;
+                order: -1;
+            }
+        }
+
+        .item-content {
+            width: 509px;
+            padding: 0 20px;
+
+            &__title {
+                font-family: 'Aeroport-Bold';
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 40px;
+                background-image: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 10px;
+            }
+
+            &__text {
+                font-family: 'Aeroport-Regular';
+                font-weight: 400;
+                font-size: 18px;
+                color: #303030;
+            }
+
+            @include breakpoint-992 {
+                width: 470px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
