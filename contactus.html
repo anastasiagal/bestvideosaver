@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner">
+                    <a class="logo" href="https://chendeva.com/bestvideosaver/index.html">
+                        <img src="img/logo.svg" width="49px" height="49px" alt="Logo">
+                        <p>Best videosaver</p>
+                    </a>
+                    <nav class="menu select-lang">
+                        <button class="menu__btn">
+                            <img src="img/burger.svg" width="34px" height="34px" alt="Burger menu icon">
+                        </button>
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">Top Insta tools</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="https://chendeva.com/bestvideosaver/blog3.html">Blog</a>
+                            </li>
+                            <li class="menu__list-item menu__list-item--lang">
+                                <a class="menu__list-link" onclick="changelang(this)" href="#">
+                                    <span>En</span>
+                                    <img src="img/arrow-icon.svg" width="8px" height="5px" alt="Arrow icon">
+                                </a>
+                                <ul class="select-lang__list select-lang__list--hidden">
+                                    <li class="select-lang__item"> 
+                                        <a href="#">English</a>
+                                        </li>
+                                    <li class="select-lang__item">
+                                        <a href="#">Russian</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <div class="container">
+                <div class="content__box">
+                    <div class="content__inner">
+                        <h1 class="content__title">Contact Us</h1>
+                        <p class="content__text-page">Thank you for using our downloader. If you have questions or offers, you can contact us by email.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content__image">
+                <img src="img/bg-element.png" width="423px" height="149px" alt="Element background">
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <div class="contact-form">
+                    <form action="#">
+                        <p>Name</p>
+                        <input class="input-form" type="text" placeholder="Enter Name" name="account" required>
+                        <p>Email</p>
+                        <input class="input-form" type="text" placeholder="Enter Email" name="account" required>
+                        <p>Message</p>
+                        <textarea class="textarea-form" placeholder="Enter message" id="textarea-support"></textarea>
+                        <button class="btn-contact" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <a class="logo" href="https://chendeva.com/bestvideosaver/index.html">
+                    <img src="img/logo.svg" alt="Logo" width="49px" height="49px" >
+                    <p>Best videosaver</p>
+                </a>
+            </div>
+            <div class="footer-lists">
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Top Insta tools</a></li>
+                </ul>
+                <ul>
+                    <li><a class="menu__list-link" href="https://chendeva.com/bestvideosaver/blog3.html">Blog</a></li>
+                    <li><a href="https://chendeva.com/bestvideosaver/contactus.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>   
+</body>
+</html>

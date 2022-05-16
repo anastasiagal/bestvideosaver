@@ -238,9 +238,156 @@
   color: #303030;
 }
 
+.terms-content p:last-child {
+  margin-top: 35px;
+}
+
 .terms-content p span {
   font-family: 'Aeroport-Bold';
   font-weight: 700;
+}
+
+.contact {
+  background-color: #F9F9F9;
+  padding: 30px 0 136px;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact-form form {
+    width: 100%;
+  }
+}
+
+.contact-form p {
+  font-family: 'Aeroport-Light';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  color: #0D0D0D;
+}
+
+.input-form {
+  width: 675px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #8319DF;
+  padding: 24px 30px 24px 20px;
+  font-family: 'Aeroport-Light';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+.input-form::-webkit-input-placeholder {
+  color: #C5C5C5;
+}
+
+.input-form:-ms-input-placeholder {
+  color: #C5C5C5;
+}
+
+.input-form::-ms-input-placeholder {
+  color: #C5C5C5;
+}
+
+.input-form::placeholder {
+  color: #C5C5C5;
+}
+
+@media (max-width: 768px) {
+  .input-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .input-form {
+    margin-bottom: 10px;
+  }
+}
+
+.textarea-form {
+  width: 675px;
+  height: 129px;
+  border-radius: 10px;
+  border: 1px solid #8319DF;
+  resize: none;
+  margin-bottom: 20px;
+  padding: 2px 18px;
+}
+
+.textarea-form::-webkit-input-placeholder {
+  font-family: 'Aeroport-Light';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  color: #C5C5C5;
+}
+
+.textarea-form:-ms-input-placeholder {
+  font-family: 'Aeroport-Light';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  color: #C5C5C5;
+}
+
+.textarea-form::-ms-input-placeholder {
+  font-family: 'Aeroport-Light';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  color: #C5C5C5;
+}
+
+.textarea-form::placeholder {
+  font-family: 'Aeroport-Light';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  color: #C5C5C5;
+}
+
+@media (max-width: 768px) {
+  .textarea-form {
+    width: 100%;
+  }
+}
+
+.btn-contact {
+  width: 259px;
+  height: 59px;
+  margin: 0 auto;
+  border: none;
+  padding: 21px 94px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#B926AE), to(#7A16E6));
+  background: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+  border-radius: 10px;
+  font-family: 'Aeroport-Bold';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Header */

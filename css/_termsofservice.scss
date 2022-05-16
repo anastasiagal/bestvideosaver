@@ -57,6 +57,9 @@
         font-family: 'Aeroport-Regular';
         font-size: 18px;
         color: #303030;
+        &:last-child {
+            margin-top: 35px;
+        }
 
         span {
             font-family: 'Aeroport-Bold';
