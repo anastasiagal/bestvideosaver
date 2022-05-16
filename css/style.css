@@ -845,7 +845,7 @@
   margin: 0 auto;
 }
 
-.preloader {
+.loading-block {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -855,18 +855,24 @@
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 45px;
+  top: -20px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 90;
 }
 
-.preloader p {
+.loading-block p {
   width: 321px;
   font-family: 'Aeroport-Light';
   font-weight: 300;
   font-size: 14px;
   line-height: 12px;
+}
+
+.loading-block--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .circlesvg {

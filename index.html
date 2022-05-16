@@ -63,8 +63,8 @@
                     <h1 class="content__title">Download Instagram video in 5 seconds</h1>
                     <p class="content__text">Save trending & viral videos to share on your stories and feed. Just export clips from the app and repost!</p>
                     <form class="form" action="#">
-                        <input class="input-content" type="text" placeholder="Insert link here" name="account" required>
-                        <button class="btn" type="submit">Download</button>
+                        <input class="input-content" type="text" placeholder="Insert link here" name="account">
+                        <button onclick="preloader()" class="btn" type="submit">Download</button>
                     </form>
                 </div>
             </div>
@@ -74,7 +74,7 @@
         </div>
 
         <div class="wrap-preloader">
-            <div class="preloader">
+            <div id="preloader" class="loading-block">
                 <svg class="circlesvg">
                     <circle class="bg" cx="25" cy="25" r="22.5" />
                     <circle class="meter-1" cx="25" cy="25" r="22.5" />
