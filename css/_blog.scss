@@ -97,6 +97,8 @@
     }
 
     ol > li {
+        font-family: 'Aeroport-Regular';
+        font-weight: 400;
         font-size: 16px;
         line-height: 25px;
         margin-bottom: 30px;
@@ -119,14 +121,9 @@
             font-size: 22px;
             line-height: 25px;
             color: #303030;
-    }
+        }
     
         p {
-            font-family: 'Aeroport-Regular';
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 25px;
-            color: #303030;
             margin-top: 25px;
         }
     }
