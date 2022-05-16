@@ -1,0 +1,66 @@
+.content {
+    background-color: #F9F9F9;
+}
+
+.terms-content {
+    padding: 40px 0 70px 0;
+
+    ol {
+        list-style-position: inside;
+        padding: 0;
+        margin: 0;
+    }
+
+    ol > li {
+        margin-top: 30px;
+
+        &::marker {
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 30px;
+            color: #991ECB;
+        }
+
+        h2 {
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 40px;
+            background-image: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            margin-left: 26px;
+            margin-top: -35px;
+            margin-bottom: 15px;
+        }
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    ul > li {
+        font-family: 'Aeroport-Regular';
+        font-size: 18px;
+        line-height: 20px;
+        color: #303030;
+        margin-bottom: 25px;
+
+        &::marker {
+            content: "- ";
+            color: #303030;
+        }
+    }
+
+    p {
+        font-family: 'Aeroport-Regular';
+        font-size: 18px;
+        color: #303030;
+
+        span {
+            font-family: 'Aeroport-Bold';
+            font-weight: 700;
+        }
+    }
+}

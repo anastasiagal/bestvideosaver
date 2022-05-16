@@ -175,23 +175,72 @@
   margin-top: 25px;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: #575757;
+.content {
+  background-color: #F9F9F9;
 }
 
-h2 {
-  font-family: 'Aeroport-Regular';
-  font-size: 36px;
-  line-height: 45px;
-  font-weight: 400;
-  color: #303030;
+.terms-content {
+  padding: 40px 0 70px 0;
 }
 
-h3 {
+.terms-content ol {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.terms-content ol > li {
+  margin-top: 30px;
+}
+
+.terms-content ol > li::marker {
   font-family: 'Aeroport-Bold';
   font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #991ECB;
+}
+
+.terms-content ol > li h2 {
+  font-family: 'Aeroport-Bold';
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 40px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#B926AE), to(#7A16E6));
+  background-image: linear-gradient(180deg, #B926AE 0%, #7A16E6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 26px;
+  margin-top: -35px;
+  margin-bottom: 15px;
+}
+
+.terms-content ul {
+  padding: 0;
+}
+
+.terms-content ul > li {
+  font-family: 'Aeroport-Regular';
+  font-size: 18px;
+  line-height: 20px;
   color: #303030;
+  margin-bottom: 25px;
+}
+
+.terms-content ul > li::marker {
+  content: "- ";
+  color: #303030;
+}
+
+.terms-content p {
+  font-family: 'Aeroport-Regular';
+  font-size: 18px;
+  color: #303030;
+}
+
+.terms-content p span {
+  font-family: 'Aeroport-Bold';
+  font-weight: 700;
 }
 
 /* Header */
@@ -447,13 +496,34 @@ h3 {
   text-align: center;
 }
 
-.content__inner h2 {
+.content__title {
+  font-family: 'Aeroport-Regular';
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #303030;
   margin-bottom: 10px;
 }
 
-.content__inner p {
+.content__text {
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   line-height: 26px;
+  color: #575757;
+}
+
+.content__text-page {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  line-height: 29px;
+  color: #575757;
+  width: 725px;
+}
+
+@media (max-width: 768px) {
+  .content__text-page {
+    width: 100%;
+  }
 }
 
 .content__image {
@@ -636,13 +706,20 @@ h3 {
   margin: 0 auto 79px;
 }
 
-.advantage__inner h2 {
+.advantage__title {
+  font-family: 'Aeroport-Regular';
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #303030;
   margin-bottom: 10px;
 }
 
-.advantage__inner p {
+.advantage__text {
+  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   line-height: 29px;
+  color: #575757;
 }
 
 .advantage__items {
@@ -801,6 +878,7 @@ video {
   color: #000;
   border: 1px solid #8319DF;
   border-radius: 10px;
+  margin-bottom: 70px;
 }
 
 @media (max-width: 576px) {
@@ -821,11 +899,17 @@ video {
   margin: 0 auto 50px;
 }
 
-.work__inner h2 {
+.work__title {
+  font-family: 'Aeroport-Regular';
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #303030;
   margin-bottom: 10px;
 }
 
-.work__inner p {
+.work__text {
+  font-family: 'Montserrat', sans-serif;
   max-width: 717px;
   font-size: 22px;
   line-height: 29px;
@@ -873,30 +957,6 @@ video {
   }
 }
 
-.work__item img {
-  position: absolute;
-  top: 9px;
-  left: 9px;
-}
-
-.work__item h3 {
-  margin-bottom: 15px;
-}
-
-.work__item p {
-  font-size: 16px;
-  line-height: 21px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.work__item p span {
-  font-weight: 600;
-}
-
-.work__item p a {
-  text-decoration: underline;
-}
-
 @media (max-width: 1200px) {
   .work__item {
     width: 465px;
@@ -910,27 +970,66 @@ video {
   }
 }
 
+.work__item .image-item {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.work__item-title {
+  font-family: 'Aeroport-Bold';
+  font-weight: 700;
+  color: #303030;
+  margin-bottom: 15px;
+}
+
+.work__item-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.work__item-text span {
+  font-weight: 600;
+}
+
+.work__item-text a {
+  text-decoration: underline;
+}
+
 /* Section assistant*/
 .assistant {
   padding: 70px 0;
 }
 
-.assistant h2 {
+.assistant__title {
+  font-family: 'Aeroport-Regular';
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  color: #303030;
   max-width: 723px;
+  text-align: center;
   margin: 0 auto 64px;
 }
 
-.assistant__item:not(:last-child) {
+.assistant__content li {
+  list-style-type: none;
+}
+
+.assistant__content li:not(:last-child) {
   margin-bottom: 50px;
 }
 
-.assistant__item h3 {
+.assistant__content h3 {
+  font-family: 'Aeroport-Bold';
+  font-weight: 700;
   font-size: 22px;
   line-height: 30px;
   margin-bottom: 20px;
 }
 
-.assistant__item p {
+.assistant__content p {
   font-size: 18px;
   line-height: 25px;
   font-family: 'Aeroport-Regular';
@@ -940,7 +1039,7 @@ video {
   padding-left: 62px;
 }
 
-.assistant__item p::before {
+.assistant__content p::before {
   content: "";
   position: absolute;
   width: 6px;
@@ -956,7 +1055,13 @@ video {
   margin-bottom: 70px;
 }
 
-.question h2 {
+.question__title {
+  font-family: 'Aeroport-Regular';
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  color: #303030;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 50px;
 }

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAEI,cAFU,CAEV,EAAE,CAAC;EACC,WAAW,EAAE,iBAAiB;EAC9B,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,KAAK;EACd,gBAAgB,EAAE,iDAAiD;EAC/D,uBAAuB,EAAE,IAAI;EAC7B,uBAAuB,EAAE,WAAW;CAC3C",
+    "sources": [
+        "termsofservice.scss"
+    ],
+    "names": [],
+    "file": "termsofservice.css"
+}
