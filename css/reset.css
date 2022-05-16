@@ -31,9 +31,7 @@ html{
   li,
   figure,
   figcaption,
-  blockquote,
-  dl,
-  dd {
+  blockquote {
     margin: 0;
     padding: 0;
   }

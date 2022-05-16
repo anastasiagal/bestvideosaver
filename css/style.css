@@ -1293,7 +1293,7 @@ video {
   margin-bottom: 50px;
 }
 
-.question__text h3 {
+.question__text dt {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -1305,16 +1305,15 @@ video {
   margin-bottom: 25px;
 }
 
-.question__text p {
+.question__text dd {
   font-family: 'Aeroport-Regular';
   font-weight: 400;
   font-size: 18px;
   color: #303030;
-  margin-bottom: 30px;
-  padding: 0 68px;
+  margin: 0 70px 30px 60px;
 }
 
-.question__text p:nth-child(4) {
+.question__text dd:nth-child(4) {
   margin-bottom: 0;
 }
 
