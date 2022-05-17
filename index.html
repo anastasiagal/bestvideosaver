@@ -11,14 +11,14 @@
 <body>
 <header class="header">
     <div class="header__top">
-        <div class="container">
+        <div class="container container-top">
             <div class="header__top-inner">
                 <a class="logo" href="https://chendeva.com/bestvideosaver/index.html">
                     <img src="img/logo.svg" width="49px" height="49px" alt="Logo">
                     <p>Best videosaver</p>
                 </a>
                 <nav class="menu select-lang">
-                    <button class="menu__btn">
+                    <button class="menu__btn" onclick="myFunction(this)">
                         <img src="img/burger.svg" width="34px" height="34px" alt="Burger menu icon">
                     </button>
                     <ul class="menu__list">
@@ -48,6 +48,36 @@
         </div>
     </div>
 </header>
+
+<div>
+    <div class="container">
+        <nav class="menu-drop select-lang">
+            <ul class="menu-drop__list">
+                <li class="menu-drop__list-item">
+                    <a class="menu-drop__list-link" href="https://chendeva.com/bestvideosaver/topinstatools.html">Top Insta tools</a>
+                </li>
+                <li class="menu-drop__list-item">
+                    <a class="menu-drop__list-link" href="https://chendeva.com/bestvideosaver/blog3.html">Blog</a>
+                </li>
+                <li class="menu-drop__list-item menu__list-item--lang">
+                    <a class="menu__list-link" onclick="changelang(this)" href="#">
+                        <span>En</span>
+                        <img src="img/arrow-icon.svg" width="8px" height="5px" alt="Arrow icon">
+                    </a>
+                    <ul class="select-lang__list select-lang__list--hidden">
+                        <li class="select-lang__item"> 
+                            <a href="#">English</a>
+                            </li>
+                        <li class="select-lang__item">
+                            <a href="#">Russian</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
 
 <main>
     <section class="content">

@@ -44,7 +44,11 @@
 }
 
 .menu {
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
     @include breakpoint-992 {
         // display: none; 
@@ -54,12 +58,13 @@
         display: none;
 
         @include breakpoint-992 {
+            // display: none;
             display: flex;
             background-color: transparent;
             border: none;
             padding: 0;
-            position: relative;
-            right: 15px;
+            // position: relative;
+            right: 0;
             z-index: 50;
             cursor: pointer;
         }
@@ -70,21 +75,19 @@
 
         @include breakpoint-992 {
             display: none;
-            // display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 2;
-            background-color: #fff;
-            height: 270px;
-            // transform: translateY(-130%);
-            transition: transform 0.5s;
+            // flex-direction: column;
+            // justify-content: center;
+            // right: 0;
+            // top: 0;
+            // z-index: 2;
+            // background-color: #fff;
+            // height: 270px;
+            // // transform: translateY(-130%);
+            // transition: transform 0.5s;
     
-            // &--active {
-            //     transform: translateY(0%);
-            // }
+            // // &--active {
+            // //     transform: translateY(0%);
+            // // }
         }
     }
 
@@ -166,6 +169,34 @@
         &:hover {
             background-color: #ECF0F9;
         }
+    }
+}
+
+/* menu-drop */
+.menu-drop {
+    display: none;
+    // height: 130px;
+
+    @include breakpoint-992 {
+        display: flex;
+    }
+
+    &__list {
+        display: none;
+        flex-direction: column;
+
+        &--active {
+            display: flex;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        font-family: 'Aeroport-Regular';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 6px;
     }
 }
 
@@ -529,7 +560,7 @@ video {
     line-height: 17px;
     color: #fff;
     cursor: pointer;
-    margin-bottom: 16px;
+    margin-top: 16px;
 
     img {
         display: inline-block;

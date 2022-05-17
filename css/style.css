@@ -508,9 +508,18 @@
 }
 
 .menu {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu__btn {
@@ -525,8 +534,7 @@
     background-color: transparent;
     border: none;
     padding: 0;
-    position: relative;
-    right: 15px;
+    right: 0;
     z-index: 50;
     cursor: pointer;
   }
@@ -541,23 +549,6 @@
 @media (max-width: 992px) {
   .menu__list {
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    background-color: #fff;
-    height: 270px;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
   }
 }
 
@@ -647,6 +638,44 @@
 
 .select-lang__item:hover {
   background-color: #ECF0F9;
+}
+
+/* menu-drop */
+.menu-drop {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .menu-drop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.menu-drop__list {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-drop__list--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-drop__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Aeroport-Regular';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 6px;
 }
 
 /* Header content section */
@@ -1081,7 +1110,7 @@ video {
   line-height: 17px;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 .btn-video img {
