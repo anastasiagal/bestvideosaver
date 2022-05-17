@@ -39,7 +39,6 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: 13px;
-        // position: relative;
     }
 }
 
@@ -50,20 +49,14 @@
     align-items: center;
     justify-content: space-between;
 
-    @include breakpoint-992 {
-        // display: none; 
-    }
-
     &__btn {
         display: none;
 
         @include breakpoint-992 {
-            // display: none;
             display: flex;
             background-color: transparent;
             border: none;
             padding: 0;
-            // position: relative;
             right: 0;
             z-index: 50;
             cursor: pointer;
@@ -75,19 +68,6 @@
 
         @include breakpoint-992 {
             display: none;
-            // flex-direction: column;
-            // justify-content: center;
-            // right: 0;
-            // top: 0;
-            // z-index: 2;
-            // background-color: #fff;
-            // height: 270px;
-            // // transform: translateY(-130%);
-            // transition: transform 0.5s;
-    
-            // // &--active {
-            // //     transform: translateY(0%);
-            // // }
         }
     }
 
@@ -123,10 +103,6 @@
 .select-lang {
     position: relative;
     z-index: 20;
-    
-    // @include breakpoint-992 {
-    //     margin-top: 50px;
-    // }
 
     &__list {
         position: absolute;
@@ -175,12 +151,15 @@
 /* menu-drop */
 .menu-drop {
     display: none;
-    // height: 130px;
 
     @include breakpoint-992 {
         display: flex;
     }
 
+    .container {
+        margin: 0;
+    }
+    
     &__list {
         display: none;
         flex-direction: column;
@@ -197,6 +176,70 @@
         font-size: 18px;
         line-height: 25px;
         margin-bottom: 6px;
+    }
+
+    &__list-link {
+        display: flex;
+        color: #000;
+
+        span {
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+        }
+
+        img {
+            margin-left: 8px;
+            margin-top: 8px;
+        }
+    }
+}
+
+.select-lang-drop {
+    position: relative;
+    z-index: 20;
+
+    &__list {
+        position: absolute;
+        left: 0;
+        top: 88px;
+        z-index: 50;
+        width: 130px;
+        height: 80px;
+        background-color: #fff;
+        border: 1px solid #C1CFF5;
+        border-radius: 10px;
+        text-transform: none;
+        opacity: 1;
+        visibility: visible;
+
+        &--hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s;
+            position: relative;
+        }
+
+        @include breakpoint-992 {
+            position: absolute;
+            border-radius: 0;
+            border: none;
+            width: 110px;
+        }
+    }
+
+    &__item {
+        padding: 3px 20px;
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 25px;
+        transition: background-color 0.1s ease-in;
+        a {
+            color: #000;
+        }
+
+        &:hover {
+            background-color: #ECF0F9;
+        }
     }
 }
 
@@ -824,6 +867,14 @@ video {
         list-style: none;
         padding: 0;
         margin: 25px 116px 0px 0px;
+
+        @include breakpoint-576 {   
+            margin: 25px 24px 0px 0px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
 
         li {
             font-family: 'Aeroport-Bold';

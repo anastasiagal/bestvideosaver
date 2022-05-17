@@ -18,7 +18,7 @@
                         <p>Best videosaver</p>
                     </a>
                     <nav class="menu select-lang">
-                        <button class="menu__btn">
+                        <button class="menu__btn" onclick="myFunction(this)">
                             <img src="img/burger.svg" width="34px" height="34px" alt="Burger menu icon">
                         </button>
                         <ul class="menu__list">
@@ -47,6 +47,33 @@
                 </div>
             </div>
         </div>
+    
+        <nav class="menu-drop select-lang-drop">
+            <div class="container">
+                <ul class="menu-drop__list">
+                    <li class="menu-drop__list-item">
+                        <a class="menu-drop__list-link" href="https://chendeva.com/bestvideosaver/topinstatools.html">Top Insta tools</a>
+                    </li>
+                    <li class="menu-drop__list-item">
+                        <a class="menu-drop__list-link" href="https://chendeva.com/bestvideosaver/blog3.html">Blog</a>
+                    </li>
+                    <li class="menu-drop__list-item menu__list-item--lang">
+                        <a class="menu-drop__list-link" onclick="changelangdrop(this)" href="#">
+                            <span>En</span>
+                            <img src="img/arrow-icon.svg" width="8px" height="5px" alt="Arrow icon">
+                        </a>
+                        <ul class="select-lang-drop__list select-lang-drop__list--hidden">
+                            <li class="select-lang-drop__item"> 
+                                <a href="#">English</a>
+                                </li>
+                            <li class="select-lang-drop__item">
+                                <a href="#">Russian</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <section class="content">

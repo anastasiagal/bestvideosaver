@@ -11,7 +11,7 @@
 <body>
 <header class="header">
     <div class="header__top">
-        <div class="container container-top">
+        <div class="container">
             <div class="header__top-inner">
                 <a class="logo" href="https://chendeva.com/bestvideosaver/index.html">
                     <img src="img/logo.svg" width="49px" height="49px" alt="Logo">
@@ -47,11 +47,9 @@
             </div>
         </div>
     </div>
-</header>
 
-<div>
-    <div class="container">
-        <nav class="menu-drop select-lang">
+    <nav class="menu-drop select-lang-drop">
+        <div class="container">
             <ul class="menu-drop__list">
                 <li class="menu-drop__list-item">
                     <a class="menu-drop__list-link" href="https://chendeva.com/bestvideosaver/topinstatools.html">Top Insta tools</a>
@@ -60,24 +58,23 @@
                     <a class="menu-drop__list-link" href="https://chendeva.com/bestvideosaver/blog3.html">Blog</a>
                 </li>
                 <li class="menu-drop__list-item menu__list-item--lang">
-                    <a class="menu__list-link" onclick="changelang(this)" href="#">
+                    <a class="menu-drop__list-link" onclick="changelangdrop(this)" href="#">
                         <span>En</span>
                         <img src="img/arrow-icon.svg" width="8px" height="5px" alt="Arrow icon">
                     </a>
-                    <ul class="select-lang__list select-lang__list--hidden">
-                        <li class="select-lang__item"> 
+                    <ul class="select-lang-drop__list select-lang-drop__list--hidden">
+                        <li class="select-lang-drop__item"> 
                             <a href="#">English</a>
                             </li>
-                        <li class="select-lang__item">
+                        <li class="select-lang-drop__item">
                             <a href="#">Russian</a>
                         </li>
                     </ul>
                 </li>
             </ul>
-        </nav>
-    </div>
-</div>
-
+        </div>
+    </nav>
+</header>
 
 <main>
     <section class="content">
@@ -113,7 +110,7 @@
             </div>
         </div>
     </section>
-
+ 
     <section class="video-content">
         <div class="container">
             <div class="video-box">
