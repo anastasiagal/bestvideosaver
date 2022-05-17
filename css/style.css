@@ -1208,13 +1208,6 @@ video {
   margin-left: 5px;
 }
 
-.btn-video--white {
-  background: #fff;
-  color: #000;
-  border: 1px solid #8319DF;
-  border-radius: 10px;
-}
-
 @media (max-width: 576px) {
   .btn-video {
     width: 100%;
