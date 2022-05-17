@@ -1,28 +1,17 @@
 .tools-content {
     padding-top: 70px;
 
-    &__description {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 22px;
-        line-height: 29px;
-        text-align: center;
-        color: #303030;
-        margin-bottom: 70px;
-    }
-
-    .tools-item {
+    div {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 70px;
+        line-height: 100%;
 
-        &:last-child {
-            margin-bottom: 50px;
-        }
-
-        .image-item {
+        img {
             height: auto;
+            vertical-align: middle;
 
             @include breakpoint-992 {
                 margin: 0 auto;
@@ -30,11 +19,17 @@
             }
         }
 
-        .item-content {
+        div {
             width: 509px;
             padding: 0 20px;
+            margin-bottom: 20px;
 
-            &__title {
+            @include breakpoint-992 {
+                width: 470px;
+                margin: 0 auto;
+            }
+
+            h2 {
                 font-family: 'Aeroport-Bold';
                 font-weight: 700;
                 font-size: 22px;
@@ -45,17 +40,27 @@
                 margin-bottom: 10px;
             }
 
-            &__text {
+            p {
                 font-family: 'Aeroport-Regular';
                 font-weight: 400;
                 font-size: 18px;
+                line-height: 24px;
                 color: #303030;
-            }
 
-            @include breakpoint-992 {
-                width: 470px;
-                margin: 0 auto;
+                &:nth-child(3) {
+                    margin-top: 30px;
+                }
             }
         }
+    }
+
+    span {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        line-height: 29px;
+        text-align: center;
+        color: #303030;
+        margin-bottom: 70px;
     }
 }
